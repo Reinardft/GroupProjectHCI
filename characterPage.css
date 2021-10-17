@@ -1,0 +1,115 @@
+.backgroundImg{
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("./Assets/Backgorund.png");
+    z-index: 0;
+    top: 100px;
+    opacity: 0.3;
+    background-size:cover;
+    background-repeat: no-repeat;
+    background-position: 50% 0 ;
+}
+.bg-content{
+    width: 100vw;
+    position: relative;
+    top: 150px;
+    z-index: 1;
+    text-align: center;
+}
+
+.bg-content .gridContainer{
+    display: inline-grid;
+    grid-template-columns: auto auto auto auto auto;
+    grid-column-gap: 40px;
+    grid-row-gap: 50px;
+    margin-bottom: 50px;
+}
+
+.bg-content .gridContainer .gridItem{
+    border: 4px solid;
+    border-color: #D43B1B;
+    background-color: #083554;
+}
+
+.bg-content .gridContainer .gridItem:hover{
+    opacity: 0.7;
+}
+
+.bg-content .gridContainer .gridItem img{
+    max-width: 150px;
+}
+
+.bg-content .gridContainer .gridItem p{
+    color: white;
+    font-weight: bold;
+}
+
+.bg-content h1{
+    position: relative;
+    color: #D43B1B;
+    font-size: 35px;
+    -webkit-text-stroke: 3px #083554;
+    margin: 0;
+    padding: 20px;
+}
+
+@media only screen and (max-width: 1024px) {
+    .bg-content .gridContainer{
+        grid-template-columns: auto auto auto auto;
+    }
+
+    .bg-content .gridContainer .gridItem img{
+        max-width: 140px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .bg-content{
+        top: 100px;
+    }
+
+    .backgroundImg{
+        top: 80px;
+    }
+
+    .bg-content .gridContainer{
+        grid-template-columns: auto auto auto;
+        grid-column-gap: 30px;
+        grid-row-gap: 40px;
+    }
+
+    .bg-content .gridContainer .gridItem img{
+        max-width: 120px;
+    }
+
+    .bg-content h1{
+        font-size: 20px;
+        -webkit-text-stroke: 1px #083554;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .bg-content{
+        top: 70px;
+    }
+
+    .backgroundImg{
+        top: 60px;
+    }
+
+    .bg-content .gridContainer{
+        grid-template-columns: auto auto;
+    }
+    
+
+    .bg-content .gridContainer .gridItem img{
+        max-width: 90px;
+        height: auto;
+    }
+
+    .bg-content h1{
+        font-size: 20px;
+        -webkit-text-stroke: 1px #083554;
+    }
+}

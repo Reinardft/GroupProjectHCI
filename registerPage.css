@@ -1,0 +1,231 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.container{
+    background-color: #023788;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.container #closeIcon{
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 30px;
+    height: 10px;
+}
+.container .left{
+    background-image: url(./Assets/bgRegis.jpg);
+    background-size: 80% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-left: 5%;
+    width: 50%;
+    height: 100%;
+}
+
+.container .right{
+    display: flex;
+    width: 50%;
+    height: 100%;
+    margin-right: 5%;
+    justify-content: center;
+    align-items: center;
+}
+.container .right form{
+    height: 100%px;
+    width: 60%;
+}
+.container .right .box{
+    background-color: #2de2e6;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    gap: 10px;
+    padding: 20px;
+    height: 100%;
+}
+.container .right .box label{
+    font-weight: 500;
+    font-size: 18px;
+}
+.container .right .box .gender-title{
+    font-weight: 500;
+    font-size: 18px;
+}
+.right .box h2{
+    font-size: 30px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.right .box .input-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container input{
+    border: 1px solid rgb(99, 99, 99);
+    margin: 10px 0 5px 0;
+    padding-left: 10px;
+    height: 35px;
+    outline: none;
+    border-radius: 5px;
+}
+.right .box .input-container input:focus{
+    background-color: #ddd;
+}
+.input-container.success input {
+    border: 2px solid #2ecc71;
+}
+.input-container.error input {
+    border: 2px solid #e74c3c;
+}
+.input-container small {
+	color: #e74c3c;
+	display: none;
+}
+.input-container.error small {
+	display: block;
+}
+.right .box button {
+    height: 35px;
+    background-color: #023788;
+    border: transparent;
+    border-radius: 5px;
+    color: white;
+    width: 100%;
+}
+
+form .gender-option .category{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin: 10px 0 5px 0;
+}
+.gender-option .category label{
+    margin-right: 25%;
+    display: flex;
+    align-items: center;
+}
+.gender-option .category .dot{
+    height: 17px;
+    width: 17px;
+    background: #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    border: 5px solid transparent;
+    transition: all 0.2s ease-in;
+}
+.gender-option small {
+    color: #e74c3c;
+    display: none;
+}
+.gender-option.error small {
+    display: block;
+}
+.gender-option.success small {
+    display: none;
+}
+.right .box .input-checkbox{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 5px;
+}
+.input-checkbox small {
+    color: #e74c3c;
+    display: none;
+}
+.input-checkbox.error small {
+    display: block;
+}
+.input-checkbox.succes small {
+    display: none;
+}
+
+#dot-1:checked ~ .category label .one,
+#dot-2:checked ~ .category label .two{
+    border-color: #ddd;
+    background: #023788;
+}
+
+.gender-option input{
+    display: none;
+}
+@media only screen and (max-width: 900px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container .left{
+        background-image: url(./Assets/bgRegis2.jpg);
+        background-size: cover;
+        width: 100vw;
+        height: 60%;
+        margin: 0;
+    }
+    .container .right{
+        margin: 0;
+        width: 100vw;
+    }
+    .container .right form{
+        width: 80%;
+        height: 100%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .container{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    .container #closeIcon{
+        right: 5px;
+    }
+    #closeIcon img{
+        width: 20px;
+    }
+    .container .left{
+        background-image: url(./Assets/bgRegis2.jpg);
+        background-size: cover;
+        width: 100vw;
+        height: 30%;
+        margin: 0;
+    }
+    
+    .container .right{
+        margin: 0;
+        width: 100vw;
+        height: 70%;
+    }
+    .container .right form{
+        width: 80%;
+        height: 100%;
+    }
+    .container .right .box{
+        height: 100%;
+        overflow: scroll;
+    }
+    .container .right .box label{
+        font-weight: 300;
+        font-size: 14px;
+    }
+    .container .right .box .gender-title{
+        font-weight: 300;
+        font-size: 14px;
+    }
+    .right .box h2{
+        font-size: 24px;
+        margin-bottom: 30px;
+    }
+    .right .box .input-container input{
+        margin: 5px;
+    }
+}

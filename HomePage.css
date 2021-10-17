@@ -1,0 +1,128 @@
+
+/*  */
+.bcgimage{
+    position: relative;
+    top: 100px;
+    background-image: url("./Assets/Backgorund.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 52.5vw;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 5%;
+}
+.content-top{
+    background-color: #ff9933;
+    border-radius: 8px;
+    width: 20%;
+    padding: 1vw 1vw 1vw 1vw;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.content-top a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}  
+.content-bottom h2{
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin-top: 150px;
+    text-align: center;
+    margin-bottom: 50px;
+}
+.content-events{
+    box-sizing: border-box;
+}
+.content-events .content-slider{
+    /* max-width: 800px; */
+    position: relative;
+    max-width: max-content;
+    margin: auto;
+}
+.content-events .content-slider .slide{
+    display: none;
+}
+.content-events .content-slider .slide img{
+    width: 100%;
+}
+.content-events .content-slider .prev, .next{
+    cursor: pointer;
+    position: absolute;
+    user-select: none;
+    top: 50%;
+}
+.content-events .content-slider .prev img, .next img{
+    width: 50px;
+    height: 50px;
+}
+.content-events .content-slider .next{
+    right: 0;
+}
+.content-events .content-slider .prev:hover, .next:hover{
+    background-color: #023788;
+}
+.content-events .dots{
+    text-align: center;
+}
+.content-events .dot{
+    height: 15px;
+    width: 15px;
+    cursor: pointer;
+    margin-top: 15px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: rgb(182, 181, 181);
+}
+.content-events .select, .dot:hover{
+    background-color: #ff9900;
+}
+
+@media only screen and (max-width: 800px){
+    .bcgimage{
+        top: 80px;
+    }
+    .content-top{
+        width: 35%;
+        height: 40px;
+    }
+    .content-top a{
+        font-size: 18px;
+    }  
+    .content-bottom{
+        top: 80px;
+    }
+}
+@media only screen and (max-width: 500px){
+    .bcgimage{
+        top: 60px;
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 100vw;
+        background-position: 50% 0;
+    }
+    .content-top{
+        height: 25px;
+        width: 40%;
+    }
+    .content-top a{
+        font-size: 14px;
+    }  
+    .content-bottom{
+        top: 60px;
+    }
+    .content-events .content-slider .prev img, .next img{
+        width: 30px;
+        height: 30px;
+    }
+    .content-events .dot{
+        height: 10px;
+        width: 10px;
+    }
+}

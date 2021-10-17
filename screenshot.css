@@ -1,0 +1,134 @@
+.content{
+    position: relative;
+    width: 100vw;
+    height: 100%;
+    background-color: #f2f2f2;
+    top: 100px;
+    z-index: 1;
+    text-align: center;
+    padding-bottom: 5%;
+}
+
+.content .content-header{
+    padding-top: 3%;
+    padding-bottom: 3%;
+    z-index: 1;
+}
+
+.content .grid-container{
+    display: inline-grid;
+    grid-template-columns: 45% 45% ;
+    gap: 50px;
+    margin: 0 3%;
+    justify-content: space-evenly;
+    z-index: 1;
+}
+
+.grid-container .grid-item .ss{
+    max-width: 100%;
+}
+.grid-container .grid-item .ss:hover{
+    filter:opacity(0.8);
+    transform: scale(1.05);
+}
+.footer{
+    top: 100px;
+}
+.grid-item .overlay{
+    position: fixed;
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    text-align: center;
+    background: rgba(0,0,0,0);
+    padding: 200px 0 100px 0;
+}
+.grid-item .overlay:target{
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+}
+.grid-item .overlay img{
+    max-height: 100%;
+    box-shadow: 3px 3px 10px rgba(0,0,0,0.6);
+}
+.grid-item .overlay:target img{
+    animation: Fadein 1s;
+}
+.grid-item .overlay .close{
+    position: absolute;
+    top: 170px;
+    color: blue;
+    text-decoration: none;
+    background-color: black;
+    border: 1px solid white;
+    opacity: 0;
+}
+.grid-item .overlay:target .close{
+    font-size: small;
+    animation: slideDown 1s .5s forwards ;
+}
+
+@keyframes Fadein {
+    0% {
+        transform: scale(0);
+        opacity: 0;
+    }
+    100%{
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+@keyframes slideDown {
+    0% {
+        margin-top: -20px;
+        opacity: 0;
+    }
+    100%{
+        margin-top: 0px;
+        opacity: 1;
+    }
+}
+@media only screen and (min-width: 500px){
+
+}
+@media only screen and (max-width: 800px){
+    .content{
+        top: 80px;
+    }
+    .content .content-header h1{
+        font-size: 25px;
+    }
+    .content .grid-container{
+        grid-template-columns: 80%;
+        gap: 30px;
+    }
+    .footer{
+        top: 80px;
+    }
+    .grid-container .grid-item img{
+        max-width: 90%;
+    }
+}
+@media only screen and (max-width: 500px){
+    .content{
+        top: 60px;
+    }
+    .content .content-header h1{
+        font-size: 16px;
+    }
+    .content .grid-container{
+        grid-template-columns: 80%;
+        gap: 30px;
+    }
+    .footer{
+        top: 60px;
+    }
+    .grid-container .grid-item img{
+        max-width: 90%;
+    }
+}

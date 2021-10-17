@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./header-footer.css">
+    <link rel="stylesheet" href="./HomePage.css">
+    <title>Home</title>
+</head>
+
+<body>
+    <div class="header">
+        <ul class="nav">
+            <li class="nav-logo">
+                <a href="index.html"><img src="./Assets/Logo.png" alt=""></a>
+            </li>
+            <li class="nav-item">
+                <a id="playBtn" href="./registerPage.html">PLAY NOW</a>
+            </li>
+            <li class="nav-item">
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+                <div class="menu-bar"></div>
+                <ul class="dropdown">
+                    <li class="drop-items"><a href="./index.html">Home</a></li>
+                    <li class="drop-items"><a href="./eventPage.html">Events</a></li>
+                    <li class="drop-items"><a href="./characterPage.html">Character</a></li>
+                    <li class="drop-items"><a href="./screenshotsPage.html">Screenshots</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="bcgimage">
+        <div class="content-top">
+            <a href="registerPage.html">PLAY NOW</a>
+        </div>
+    </div>
+
+    <div class="content-bottom">
+        <h2>EVENT</h2>
+    </div>
+    <div class="content-events">
+        <div class="content-slider">
+            <div class="slider">
+                <div class="slide"><a href="./eventPage.html"><img src="./Assets/event/Event2.jpg" alt=""></a></div>
+                <div class="slide"><a href="./eventPage.html"><img src="./Assets/event/Event3.png" alt=""></a></div>
+                <div class="slide"><a href="./eventPage.html"><img src="./Assets/event/Event4.jpg" alt=""></a></div>
+                <div class="slide"><a href="./eventPage.html"><img src="./Assets/event/Event5.jpg" alt=""></a></div>
+                <div class="slide"><a href="./eventPage.html"><img src="./Assets/event/Event7.jpg" alt=""></a></div>
+                <div class="slide"><a href="./eventPage.html"><img src="./Assets/event/Event1.png" alt=""></a></div>
+            </div>
+            <a class="prev" onclick="plusSlides(-1)"><img src="./Assets/leftIcon.png" alt=""></a>
+            <a class="next" onclick="plusSlides(1)"><img src="./Assets/rightIcon.png" alt=""></a>
+        </div>
+        <div class="dots">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+            <span class="dot" onclick="currentSlide(5)"></span>
+            <span class="dot" onclick="currentSlide(6)"></span>
+        </div>
+    </div>
+    <div class="footer">
+        <p>Copyright by Frawlsalla, 2021</p>
+        <div id=right-footer>
+            <a href="https://twitter.com" target="_blank">
+                <img src="./Assets/twitter.png" alt="" id="twitter">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+                <img src="./Assets/instagram.png" alt="" id="ig">
+            </a>
+        </div>
+    </div>
+    <script src="./jquery-3.5.1.js"></script>
+    <script src="./HomePage.js"></script>
+</body>
+
+</html>
